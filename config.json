@@ -1,0 +1,152 @@
+{
+    "site_info": {
+        "name": "Bruce Liang",
+        "title": "Ph.D. Student at Zhejiang University",
+        "location": "Hangzhou, China",
+        "email": "zk.liang@zju.edu.cn",
+        "wechat": "BruceLiang_ZJU",
+        "github": "bruceliang",
+        "xiaohongshu": "Bruce_liang"
+    },
+    "about": {
+        "greeting": "你好! 我是 Bruce Liang。👋",
+        "current_status": "我目前在浙江大学攻读数智创新管理博士学位，我的导师是 WJ 教授。",
+        "previous_status": "在此之前，我曾在浙江大学 LeadLab 完成应用心理学硕士学位，师从 LZG 教授。我的本科毕业于江南大学土木工程专业。",
+        "education": [
+            {
+                "degree": "博士",
+                "school": "浙江大学",
+                "major": "数智创新管理",
+                "status": "在读"
+            },
+            {
+                "degree": "硕士",
+                "school": "浙江大学",
+                "major": "应用心理学",
+                "year": "2020"
+            },
+            {
+                "degree": "学士",
+                "school": "江南大学",
+                "major": "土木工程",
+                "year": "2016"
+            }
+        ],
+        "experience": [
+            {
+                "organization": "浙江大学 LeadLab",
+                "position": "研究生",
+                "period": "2018-2020"
+            },
+            {
+                "organization": "浙江大学",
+                "position": "博士研究生",
+                "period": "2021-至今"
+            }
+        ]
+    },
+    "research_interests": [
+        {
+            "title": "计算社会科学",
+            "icon": "fa-robot",
+            "description": "运用计算方法和大数据分析技术研究社会科学问题，结合定量与定性方法探索组织行为和社会现象。",
+            "tags": ["大数据分析", "社会网络分析", "文本挖掘"]
+        },
+        {
+            "title": "AI-agent与仿真建模",
+            "icon": "fa-brain",
+            "description": "利用人工智能代理和仿真建模技术模拟组织行为和社会互动，研究复杂系统中的涌现现象。",
+            "tags": ["多智能体系统", "仿真模型", "复杂系统"]
+        },
+        {
+            "title": "组织行为与创新管理",
+            "icon": "fa-users",
+            "description": "研究组织中的人际互动、领导力发展和创新行为，探索数字化转型背景下的组织创新战略。",
+            "tags": ["组织行为学", "创新战略", "领导力研究"]
+        }
+    ],
+    "skills": [
+        {
+            "name": "数据分析",
+            "level": 95
+        },
+        {
+            "name": "仿真建模",
+            "level": 90
+        },
+        {
+            "name": "计算社会科学方法",
+            "level": 85
+        },
+        {
+            "name": "人工智能应用",
+            "level": 80
+        }
+    ],
+    "publications": {
+        "journal": [
+            {
+                "year": "2023",
+                "title": "探索大语言模型在社会科学研究中的应用与伦理挑战",
+                "authors": "Bruce Liang, 某某某, 某某",
+                "type": "Journal",
+                "abstract": "本文对大语言模型在社会科学研究中的应用前景进行了全面分析，同时深入探讨了相关的伦理挑战和解决方案。研究指出了语言模型在分析社会现象、模拟人类行为和辅助理论构建方面的潜力，并提出了减轻潜在偏见和确保研究伦理的方法。"
+            }
+        ],
+        "conference": [
+            {
+                "year": "2024",
+                "title": "AgentSense: Benchmarking Social Intelligence of Language Agents through Interactive Scenarios",
+                "authors": "Bruce Liang*, Jingcong Liang*, Jiayu Lin*, Xinnong Zhang*, Xiawei Liu, Shiyue Yang, Rong Ye, Lei Chen, Haoyu Kuang, Xuanjing Huang, Zhongyu Wei",
+                "type": "Preprint",
+                "abstract": "本文提出了一个面向语言智能体社会智能的基准测试框架，通过交互式场景评估大语言模型在社交场景中的表现能力。主要贡献包括设计了一系列互动场景，建立了多维度评估指标，并分析了当前语言模型在社会智能方面的能力与局限。"
+            }
+        ]
+    },
+    "projects": [
+        {
+            "title": "组织行为仿真系统",
+            "icon": "fa-sitemap",
+            "description": "基于多智能体的组织行为仿真系统，模拟不同领导风格和组织结构对创新行为的影响。",
+            "tags": ["Python", "多智能体", "仿真模型"],
+            "links": {
+                "github": "#",
+                "demo": "#"
+            }
+        }
+    ],
+    "lifestyle": {
+        "reading": [
+            {
+                "title": "《人类简史》",
+                "author": "尤瓦尔·赫拉利",
+                "notes": "在数字化时代，人类如何保持自我认知与社会联结？赫拉利从宏观历史视角揭示了人类发展的关键转折点，启发我思考技术与人文的平衡。",
+                "date": "2023年11月"
+            }
+        ],
+        "photography": [
+            {
+                "title": "西湖晨曦",
+                "location": "杭州",
+                "year": "2023"
+            }
+        ],
+        "collection": [
+            {
+                "title": "业余无线电设备",
+                "badge": "HAM Radio",
+                "description": "作为一名初级HAM爱好者（呼号: BH1XXX），我收集了几台手持和基地电台。业余无线电不仅是一种爱好，更是一种能连接世界的方式，特别是在自然灾害等紧急情况下。",
+                "tags": ["Yaesu FT-991A", "Baofeng UV-5R", "天线改装"]
+            }
+        ],
+        "moments": [
+            {
+                "date": "2024年4月",
+                "title": "学术会议间隙",
+                "location": "北京",
+                "content": "在北京参加学术会议的间隙，抽空去了故宫博物院。文化的厚重感总能给我带来新的研究灵感。晚上和几位同领域的PhD学生交流，探讨了AI在社会科学研究中的伦理问题。",
+                "tags": ["#学术旅行", "#文化探索"]
+            }
+        ]
+    }
+} 
