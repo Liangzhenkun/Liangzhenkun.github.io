@@ -11,7 +11,7 @@
     "about": {
         "greeting": "你好! 我是 Bruce Liang。👋",
         "current_status": "我目前在浙江大学攻读数智创新管理博士学位，我的导师是 WJ 教授。",
-        "previous_status": "在此之前，我曾在浙江大学完成应用心理学硕士学位，师从 LZG 教授。我的本科毕业于江南大学土木工程专业。",
+        "previous_status": "在此之前，我在2024年完成浙江大学应用心理学硕士学位，师从 LZG 教授。我的本科毕业于江南大学土木工程专业。",
         "education": [
             {
                 "degree": "博士",
@@ -34,22 +34,22 @@
         ],
         "experience": [
             {
-                "organization": "独立负责 QE 团队",
-                "position": "项目调研负责人",
+                "organization": "校内创业团\"化形APP\"",
+                "position": "用研&交互设计负责人",
                 "period": "2025.11 - 2026.03",
-                "description": "负责 [文案]&[图片分析] 项目调研"
+                "description": "可行性分析，功能设计，产出交互原型线框图"
             },
             {
-                "organization": "TD 团队 + OD 校内创业团",
-                "position": "培训助理 + 用研&交互设计负责人",
+                "organization": "算法摄影用户体验研究实习（虹软科技）",
+                "position": "项目调研负责人",
                 "period": "2023.03 - 2023.07",
-                "description": "负责'化形 APP' 用研&交互设计"
+                "description": "独立负责QE团队[美颜]&[图像分割]项目用研"
             },
             {
-                "organization": "新城中国",
+                "organization": "头部地产人力资源管理实习（融创中国）",
                 "position": "人力资源管理实习生",
                 "period": "2021.06 - 2021.09",
-                "description": "负责人才梯队建设工具优化"
+                "description": "TD团队培训辅助+OD人才梯队建设工具优化"
             }
         ]
     },
@@ -118,17 +118,25 @@
                 "title": "Being a Parent Helps Being a Benevolent Leader: A Mixed-method Approach",
                 "authors": "Liu, Z., Liang, Z, & Wang, C.",
                 "type": "Journal",
-                "abstract": "SSCI一区收录，FT50排名",
+                "abstract": "SSCI一区收录，FT50序列",
                 "journal": "Journal of Business Ethics"
             }
         ],
         "conference": [
             {
+                "year": "2025",
+                "title": "How Post-Work Commuting Supports Work-Family Balance: Leisure Crafting and Family Role Reattachment",
+                "authors": "Liang, Z, & Liu, Z.",
+                "type": "Proceedings",
+                "abstract": "AOM管理学年会 录用 2025哥本哈根",
+                "conference": "Academy of Management Proceedings"
+            },
+            {
                 "year": "2024",
                 "title": "Being a parent helps being a benevolent leader: A mixed-method approach",
                 "authors": "Liang, Z, Wang, C., Li, M, & Liu, Z.",
                 "type": "Poster",
-                "abstract": "美国工业组织心理学会，2024芝加哥",
+                "abstract": "美国工业组织心理学会 录用 2024芝加哥",
                 "conference": "Society for Industrial and Organizational Psychology Annual Conference"
             },
             {
@@ -136,15 +144,7 @@
                 "title": "Leader Development by Cross-role Enrichment: Effects of Parenting Experience on Leader Effectiveness",
                 "authors": "Wang, C., & Liang, Z.",
                 "type": "Proceedings",
-                "abstract": "AOM管理学年会，2023波士顿",
-                "conference": "Academy of Management Proceedings"
-            },
-            {
-                "year": "2025",
-                "title": "How Post-Work Commuting Supports Work-Family Balance: Leisure Crafting and Family Role Reattachment",
-                "authors": "Liang, Z, & Liu, Z.",
-                "type": "Proceedings",
-                "abstract": "AOM管理学年会，2025日本东京",
+                "abstract": "AOM管理学年会 录用 2023波士顿",
                 "conference": "Academy of Management Proceedings"
             }
         ]

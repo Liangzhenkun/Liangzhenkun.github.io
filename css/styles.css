@@ -27,6 +27,7 @@
     --text-light: #bbb;
     --bg-color: #1a1a1a;
     --bg-secondary: #252525;
+    --bg-white: #252525;
     --border-color: #333;
     --shadow-color: rgba(0, 0, 0, 0.2);
 }
@@ -35,6 +36,107 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* 动态背景 */
+.dynamic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.dynamic-bg::before, .dynamic-bg::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(46, 125, 50, 0.1);
+    animation: float 20s infinite ease-in-out;
+}
+
+.dynamic-bg::before {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.dynamic-bg::after {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(20px, -20px) rotate(90deg);
+    }
+    50% {
+        transform: translate(0, 20px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-20px, -10px) rotate(270deg);
+    }
+}
+
+/* 几何图形 */
+.dynamic-bg .shape {
+    position: absolute;
+    background: rgba(244, 162, 97, 0.15);
+    animation: move 15s infinite ease-in-out;
+}
+
+.dynamic-bg .shape:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    right: 20%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation-delay: 0s;
+}
+
+.dynamic-bg .shape:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    bottom: 30%;
+    left: 15%;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    animation-delay: 2s;
+}
+
+.dynamic-bg .shape:nth-child(3) {
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation-delay: 4s;
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translate(30px, -30px) rotate(90deg) scale(1.1);
+    }
+    50% {
+        transform: translate(0, 30px) rotate(180deg) scale(0.9);
+    }
+    75% {
+        transform: translate(-30px, -15px) rotate(270deg) scale(1.05);
+    }
 }
 
 html {
@@ -301,29 +403,46 @@ input:checked + .slider:before {
     text-align: center;
 }
 
-.quote {
+.quote-container {
+    position: relative;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.quote-line {
     font-style: italic;
     color: var(--text-light);
     font-size: 0.9rem;
-    position: relative;
-    padding: 0 1rem;
+    margin: 0.5rem 0;
 }
 
-.quote::before, .quote::after {
+.quote-time {
+    font-style: normal;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.75rem 0;
+    padding: 0.5rem;
+    background-color: rgba(46, 125, 50, 0.1);
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.quote-container::before, .quote-container::after {
     content: '"';
     position: absolute;
     color: var(--primary-color);
     font-size: 1.2rem;
 }
 
-.quote::before {
+.quote-container::before {
     left: 0;
-    top: -5px;
+    top: 0;
 }
 
-.quote::after {
+.quote-container::after {
     right: 0;
-    bottom: -5px;
+    bottom: 0;
 }
 
 /* 主内容区 */
@@ -331,6 +450,8 @@ input:checked + .slider:before {
     flex: 1;
     padding: 2rem;
     overflow-y: auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .header {
@@ -390,7 +511,17 @@ input:checked + .slider:before {
 
 /* 关于我部分 */
 .about-content {
-    max-width: 800px;
+    max-width: 100%;
+}
+
+/* 统一内容宽度 */
+.research-interests,
+.publications-container,
+.working-papers-container,
+.projects-grid,
+.lifestyle-container,
+.code-style-header {
+    max-width: 100%;
 }
 
 .greeting {
@@ -583,6 +714,7 @@ input:checked + .slider:before {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px var(--shadow-color);
+    max-width: 100%;
 }
 
 .skills-title {

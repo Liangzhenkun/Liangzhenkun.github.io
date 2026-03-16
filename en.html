@@ -32,8 +32,9 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="profile">
-                <div class="profile-image">
-                    <img src="images/placeholder.svg" alt="Bruce Liang" id="profile-img">
+                <div class="profile-image" style="cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                    <img src="images/Profile Picture.jpg" alt="Bruce Liang" id="profile-img" style="object-fit: cover; width: 100%; height: 100%;">
+                    <input type="file" id="avatar-upload" style="display: none;" accept="image/*">
                 </div>
                 <h1 class="name">Bruce Liang</h1>
                 <p class="title">Ph.D. Student at Zhejiang University</p>
@@ -44,17 +45,17 @@
                 </div>
                 
                 <div class="contact-icons">
-                    <a href="mailto:bruceliang@example.com" class="icon-link" title="Email">
+                    <a href="#" class="icon-link" title="Email" onclick="showEmailOptions()">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://github.com/bruceliang" class="icon-link" title="GitHub">
+                    <a href="https://github.com/Liangzhenkun" class="icon-link" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="https://scholar.google.com/citations?user=bruceliang" class="icon-link" title="Google Scholar">
                         <i class="fas fa-graduation-cap"></i>
                     </a>
-                    <a href="https://twitter.com/bruceliang" class="icon-link" title="Twitter">
-                        <i class="fab fa-twitter"></i>
+                    <a href="#" class="icon-link" title="Xiaohongshu" onclick="showXiaohongshuModal()">
+                        <i class="fab fa-instagram"></i>
                     </a>
                 </div>
             </div>
@@ -62,14 +63,21 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="#about" class="nav-link active"><i class="fas fa-user"></i> About Me</a></li>
-                    <li><a href="#research" class="nav-link"><i class="fas fa-flask"></i> Research</a></li>
-                    <li><a href="#publications" class="nav-link"><i class="fas fa-book"></i> Publications</a></li>
+                    <li><a href="#research" class="nav-link"><i class="fas fa-flask"></i> Research Interests</a></li>
+                    <li><a href="#publications" class="nav-link"><i class="fas fa-book"></i> Journal Papers</a></li>
+                    <li><a href="#proceedings" class="nav-link"><i class="fas fa-microphone"></i> Conference Papers</a></li>
+                    <li><a href="#working-papers" class="nav-link"><i class="fas fa-gamepad"></i> Game Design Projects</a></li>
                     <li><a href="#projects" class="nav-link"><i class="fas fa-code-branch"></i> Projects</a></li>
+                    <li><a href="#lifestyle" class="nav-link"><i class="fas fa-terminal"></i> Me time Record</a></li>
                 </ul>
             </nav>
             
             <div class="sidebar-footer">
-                <p class="quote">"Interdisciplinary Explorer"</p>
+                <div class="quote-container">
+                    <p class="quote-line">Nice to meet you at</p>
+                    <p class="quote-time" id="current-time"></p>
+                    <p class="quote-line">and connect</p>
+                </div>
             </div>
         </aside>
         
@@ -83,25 +91,28 @@
             <section id="about" class="section">
                 <h2 class="section-title">About Me <span class="title-decoration"></span></h2>
                 <div class="about-content">
-                    <p class="greeting">Hello! I'm <span class="highlight">Bruce Liang</span>.<span class="emoji">👋</span></p>
-                    <p>I am currently pursuing a Ph.D. in Digital Innovation Management at <span class="highlight">Zhejiang University</span>, where I'm advised by Prof. <a href="#" class="link">WJ</a>.</p>
-                    <p>Previously, I completed my Master's degree in Applied Psychology at Zhejiang University in the <a href="#" class="link">LeadLab</a> under the guidance of Prof. <a href="#" class="link">LZG</a>. I received my Bachelor's degree in Civil Engineering from Jiangnan University.</p>
+                    <p class="greeting">Hello! I'm <span class="highlight">Zhenkun</span>, you can also call me Bruce. <span class="emoji">👋</span></p>
+                    <p>I pursued a Ph.D. in Digital Intelligence Innovation Management at <span class="highlight">Zhejiang University</span>, supervised by Professor <a href="#" class="link">Weijiang</a>.</p>
+                    <p>Previously, I obtained my master's degree in Applied Psychology from Zhejiang University's <a href="#" class="link">LeadLab</a> in 2024, under the guidance of Professor <a href="#" class="link">Zhengguang Liu</a>. </p>
+                    <p>I obtained my bachelor's degree in Civil Engineering from <span class="highlight">Jiangnan University</span>.</p>
+                    <p>Now, I'm learning game design at RAC. Nice to meet you at this point in my life~</p>
                     
                     <div class="academic-info">
                         <div class="info-card">
                             <h3><i class="fas fa-university"></i> Education</h3>
                             <ul>
-                                <li><strong>Ph.D.</strong> - Zhejiang University - Digital Innovation Management (Current)</li>
-                                <li><strong>M.Sc.</strong> - Zhejiang University - Applied Psychology (2020)</li>
-                                <li><strong>B.Sc.</strong> - Jiangnan University - Civil Engineering (2016)</li>
+                                <li><strong>Ph.D.</strong> - Zhejiang University - Digital Intelligence Innovation Management (September 2024 - December 2025)</li>
+                                <li><strong>Master</strong> - Zhejiang University - Applied Psychology (September 2021 - July 2024)</li>
+                                <li><strong>Bachelor</strong> - Jiangnan University - Civil Engineering (September 2015 - July 2019)</li>
                             </ul>
                         </div>
                         
                         <div class="info-card">
                             <h3><i class="fas fa-briefcase"></i> Experience</h3>
                             <ul>
-                                <li><strong>Zhejiang University LeadLab</strong> - Graduate Researcher (2018-2020)</li>
-                                <li><strong>Zhejiang University</strong> - Ph.D. Researcher (2021-Present)</li>
+                                <li><strong>Campus Entrepreneurship Team "Huaxing APP"</strong> - User Research & Interaction Design Lead (November 2025 - March 2026) - Feasibility analysis, functional design, and interactive prototype wireframes</li>
+                                <li><strong>Algorithm Photography User Experience Research Intern (ArcSoft)</strong> - Project Research Lead (March 2023 - July 2023) - Independently responsible for QE team [Beauty] & [Image Segmentation] project research</li>
+                                <li><strong>Head Real Estate Human Resource Management Intern (Sunac China)</strong> - HR Management Intern (June 2021 - September 2021) - TD team training assistance + OD talent echelon construction tool optimization</li>
                             </ul>
                         </div>
                     </div>
@@ -110,35 +121,65 @@
             
             <section id="research" class="section">
                 <h2 class="section-title">Research Interests <span class="title-decoration"></span></h2>
-                <p class="section-intro">My work spans Organizational Behavior, Innovation Strategy Management, and Computational Social Science. I am particularly interested in the following research areas:</p>
+                <p class="section-intro">My research spans organizational behavior, innovation strategy management, and computational social science. I am particularly interested in the following research directions:</p>
                 
                 <div class="research-interests">
                     <div class="interest-card">
                         <div class="interest-icon">
-                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-book"></i>
                         </div>
                         <div class="interest-content">
-                            <h3>Computational Social Science</h3>
-                            <p>Using computational methods and big data analytics to study social science problems, combining quantitative and qualitative approaches to explore organizational behavior and social phenomena.</p>
+                            <h3>Knowledge Management</h3>
+                            <p>Research on knowledge creation, sharing, and application processes in organizations, exploring knowledge management strategies in the digital context.</p>
                             <div class="tags">
-                                <span class="tag">Big Data Analysis</span>
-                                <span class="tag">Social Network Analysis</span>
-                                <span class="tag">Text Mining</span>
+                                <span class="tag">Knowledge Creation</span>
+                                <span class="tag">Knowledge Sharing</span>
+                                <span class="tag">Digital Transformation</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="interest-card">
                         <div class="interest-icon">
-                            <i class="fas fa-brain"></i>
+                            <i class="fas fa-user"></i>
                         </div>
                         <div class="interest-content">
-                            <h3>AI-agents & Simulation Modeling</h3>
-                            <p>Leveraging artificial intelligence agents and simulation modeling techniques to simulate organizational behavior and social interactions, studying emergent phenomena in complex systems.</p>
+                            <h3>User Experience Research</h3>
+                            <p>Studying user behavior and needs through quantitative and qualitative methods to optimize product design and service experience.</p>
                             <div class="tags">
-                                <span class="tag">Multi-agent Systems</span>
-                                <span class="tag">Simulation Models</span>
-                                <span class="tag">Complex Systems</span>
+                                <span class="tag">User Research</span>
+                                <span class="tag">Experience Design</span>
+                                <span class="tag">Behavior Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interest-card">
+                        <div class="interest-icon">
+                            <i class="fas fa-pencil"></i>
+                        </div>
+                        <div class="interest-content">
+                            <h3>Design Psychology</h3>
+                            <p>Applying psychological principles to product and service design to enhance user experience and satisfaction.</p>
+                            <div class="tags">
+                                <span class="tag">Design Thinking</span>
+                                <span class="tag">Cognitive Psychology</span>
+                                <span class="tag">User-Centered Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interest-card">
+                        <div class="interest-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="interest-content">
+                            <h3>Industrial Organizational Psychology</h3>
+                            <p>Studying human behavior in work environments to optimize organizational management and employee performance.</p>
+                            <div class="tags">
+                                <span class="tag">Organizational Behavior</span>
+                                <span class="tag">Human Resource Management</span>
+                                <span class="tag">Employee Motivation</span>
                             </div>
                         </div>
                     </div>
@@ -148,12 +189,12 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <div class="interest-content">
-                            <h3>Organizational Behavior & Innovation Management</h3>
-                            <p>Researching interpersonal interactions, leadership development, and innovative behavior in organizations, exploring innovation strategies in the context of digital transformation.</p>
+                            <h3>Leadership Development</h3>
+                            <p>Researching the formation, development, and influencing factors of leadership, exploring effective leadership development strategies.</p>
                             <div class="tags">
-                                <span class="tag">Organizational Behavior</span>
-                                <span class="tag">Innovation Strategy</span>
-                                <span class="tag">Leadership Studies</span>
+                                <span class="tag">Leadership</span>
+                                <span class="tag">Management Development</span>
+                                <span class="tag">Team Building</span>
                             </div>
                         </div>
                     </div>
@@ -163,27 +204,39 @@
                     <h3 class="skills-title">Skills & Tools</h3>
                     <div class="skills">
                         <div class="skill-item">
-                            <span class="skill-name">Data Analysis</span>
+                            <span class="skill-name">AI Agents Workflow</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 95%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Simulation Modeling</span>
+                            <span class="skill-name">Qualitative Research</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Computational Social Science Methods</span>
+                            <span class="skill-name">Quantitative Data Analysis (SPSS & R & Python)</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 85%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">AI Applications</span>
+                            <span class="skill-name">Interface Interaction & Design Tools (Axure & Figma)</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">English Proficiency (IELTS 6.0)</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Office Software</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
                             </div>
                         </div>
                     </div>
@@ -191,83 +244,145 @@
             </section>
             
             <section id="publications" class="section">
-                <h2 class="section-title">Publications <span class="title-decoration"></span></h2>
+                <h2 class="section-title">Journal Papers <span class="title-decoration"></span></h2>
                 <div class="publications-filter">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="2024">2024</button>
                     <button class="filter-btn" data-filter="2023">2023</button>
-                    <button class="filter-btn" data-filter="conference">Conference</button>
-                    <button class="filter-btn" data-filter="journal">Journal</button>
                 </div>
                 
                 <div class="publications-container">
-                    <div class="publication-item" data-year="2024" data-type="conference">
+                    <div class="publication-item" data-year="2024" data-type="journal">
                         <div class="publication-year">2024</div>
                         <div class="publication-content">
                             <h3 class="publication-title">
-                                <a href="#" target="_blank">AgentSense: Benchmarking Social Intelligence of Language Agents through Interactive Scenarios</a>
-                                <span class="paper-badge">Preprint</span>
-                            </h3>
-                            <p class="publication-authors">
-                                <span class="author self">Bruce Liang*</span>, Jingcong Liang*, Jiayu Lin*, Xinnong Zhang*, Xiawei Liu, Shiyue Yang, Rong Ye, Lei Chen, Haoyu Kuang, Xuanjing Huang, Zhongyu Wei.
-                            </p>
-                            <div class="publication-links">
-                                <a href="#" class="pub-link" title="PDF"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="pub-link" title="Code"><i class="fas fa-code"></i> Code</a>
-                                <a href="#" class="pub-link" title="Dataset"><i class="fas fa-database"></i> Dataset</a>
-                                <a href="#" class="pub-link" title="Demo"><i class="fas fa-play-circle"></i> Demo</a>
-                                <button class="abstract-toggle"><i class="fas fa-chevron-down"></i> Abstract</button>
-                            </div>
-                            <div class="publication-abstract hidden">
-                                <p>This paper presents a benchmarking framework for evaluating the social intelligence of language agents through interactive scenarios. The main contributions include designing a series of interactive scenarios, establishing multi-dimensional evaluation metrics, and analyzing the capabilities and limitations of current language models in terms of social intelligence.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="publication-item" data-year="2024" data-type="conference">
-                        <div class="publication-year">2024</div>
-                        <div class="publication-content">
-                            <h3 class="publication-title">
-                                <a href="#" target="_blank">Unveiling the Truth and Facilitating Change: Towards Agent-based Large-scale Social Movement Simulation</a>
-                                <span class="paper-badge">ACL-Findings</span>
-                            </h3>
-                            <p class="publication-authors">
-                                <span class="author self">Bruce Liang</span>, Zhongyu Wei, Xuanjing Huang.
-                            </p>
-                            <div class="publication-links">
-                                <a href="#" class="pub-link" title="PDF"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="pub-link" title="Code"><i class="fas fa-code"></i> Code</a>
-                                <button class="abstract-toggle"><i class="fas fa-chevron-down"></i> Abstract</button>
-                            </div>
-                            <div class="publication-abstract hidden">
-                                <p>This research explores agent-based methods for large-scale social movement simulation, proposing a new framework to reveal the truth in social movements and facilitate change. We built a multi-agent system capable of simulating large-scale social interactions and information dissemination processes, providing a new computational approach to understanding social dynamics.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="publication-item" data-year="2023" data-type="journal">
-                        <div class="publication-year">2023</div>
-                        <div class="publication-content">
-                            <h3 class="publication-title">
-                                <a href="#" target="_blank">Exploring Applications and Ethical Challenges of Large Language Models in Social Science Research</a>
+                                <a href="https://doi.org/10.1007/s10551-024-05757-1" target="_blank">Being a Parent Helps Being a Benevolent Leader: A Mixed-method Approach</a>
                                 <span class="paper-badge">Journal</span>
                             </h3>
                             <p class="publication-authors">
-                                <span class="author self">Bruce Liang</span>, Someone Else, Another Author.
+                                Liu, Z., <span class="author self">Liang, Z</span>, & Wang, C.
                             </p>
+                            <p class="publication-journal">Journal of Business Ethics</p>
                             <div class="publication-links">
                                 <a href="#" class="pub-link" title="PDF"><i class="fas fa-file-pdf"></i> PDF</a>
                                 <button class="abstract-toggle"><i class="fas fa-chevron-down"></i> Abstract</button>
                             </div>
                             <div class="publication-abstract hidden">
-                                <p>This paper provides a comprehensive analysis of the application prospects of large language models in social science research, while deeply exploring related ethical challenges and solutions. The study points out the potential of language models in analyzing social phenomena, simulating human behavior, and assisting in theory construction, and proposes methods to mitigate potential biases and ensure research ethics.</p>
+                                <p>SSCI Tier 1 indexed, FT50 sequence</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="citation-info">
-                    <p class="note">* indicates equal contributions</p>
+                    <p class="note">* indicates co-first author</p>
+                </div>
+            </section>
+            
+            <section id="proceedings" class="section">
+                <h2 class="section-title">Conference Papers <span class="title-decoration"></span></h2>
+                <div class="publications-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="2024">2024</button>
+                    <button class="filter-btn" data-filter="2023">2023</button>
+                </div>
+                
+                <div class="publications-container">
+                    <div class="publication-item" data-year="2025" data-type="conference">
+                        <div class="publication-year">2025</div>
+                        <div class="publication-content">
+                            <h3 class="publication-title">
+                                <a href="#" target="_blank">How Post-Work Commuting Supports Work-Family Balance: Leisure Crafting and Family Role Reattachment</a>
+                                <span class="paper-badge">Proceedings</span>
+                            </h3>
+                            <p class="publication-authors">
+                                <span class="author self">Liang, Z</span>, & Liu, Z.
+                            </p>
+                            <p class="publication-journal">Academy of Management Proceedings</p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link" title="PDF"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <button class="abstract-toggle"><i class="fas fa-chevron-down"></i> Abstract</button>
+                            </div>
+                            <div class="publication-abstract hidden">
+                                <p>AOM Annual Meeting Accepted 2025 Copenhagen</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item" data-year="2024" data-type="conference">
+                        <div class="publication-year">2024</div>
+                        <div class="publication-content">
+                            <h3 class="publication-title">
+                                <a href="#" target="_blank">Being a parent helps being a benevolent leader: A mixed-method approach</a>
+                                <span class="paper-badge">Poster</span>
+                            </h3>
+                            <p class="publication-authors">
+                                <span class="author self">Liang, Z</span>, Wang, C., Li, M, & Liu, Z.
+                            </p>
+                            <p class="publication-journal">Society for Industrial and Organizational Psychology Annual Conference</p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link" title="PDF"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <button class="abstract-toggle"><i class="fas fa-chevron-down"></i> Abstract</button>
+                            </div>
+                            <div class="publication-abstract hidden">
+                                <p>Society for Industrial and Organizational Psychology Accepted 2024 Chicago</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item" data-year="2023" data-type="conference">
+                        <div class="publication-year">2023</div>
+                        <div class="publication-content">
+                            <h3 class="publication-title">
+                                <a href="#" target="_blank">Leader Development by Cross-role Enrichment: Effects of Parenting Experience on Leader Effectiveness</a>
+                                <span class="paper-badge">Proceedings</span>
+                            </h3>
+                            <p class="publication-authors">
+                                Wang, C., & <span class="author self">Liang, Z</span>.
+                            </p>
+                            <p class="publication-journal">Academy of Management Proceedings</p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link" title="PDF"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <button class="abstract-toggle"><i class="fas fa-chevron-down"></i> Abstract</button>
+                            </div>
+                            <div class="publication-abstract hidden">
+                                <p>AOM Annual Meeting Accepted 2023 Boston</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="citation-info">
+                    <p class="note">* indicates co-first author</p>
+                </div>
+            </section>
+            
+            <section id="working-papers" class="section">
+                <h2 class="section-title">Game Design Projects in Progress <span class="title-decoration"></span></h2>
+                <div class="working-papers-container">
+                    <div class="working-paper-item">
+                        <div class="working-paper-content">
+                            <h3 class="working-paper-title">
+                                <a href="#" target="_blank">Educational Game Design and Development</a>
+                                <span class="paper-badge">In Progress</span>
+                            </h3>
+                            <p class="working-paper-desc">
+                                Designing an interactive game that combines educational content with game elements, aiming to enhance users' learning experience and knowledge retention through gamification. Currently in the prototype design phase, expected completion: end of 2026.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="working-paper-item">
+                        <div class="working-paper-content">
+                            <h3 class="working-paper-title">
+                                <a href="#" target="_blank">Gamification User Experience Research</a>
+                                <span class="paper-badge">In Progress</span>
+                            </h3>
+                            <p class="working-paper-desc">
+                                Researching how gamification elements affect user behavior and experience, exploring optimal gamification strategies through experimental design and data analysis. Expected completion: June 2026.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
             
@@ -279,11 +394,11 @@
                             <i class="fas fa-sitemap project-icon"></i>
                             <h3>Organizational Behavior Simulation System</h3>
                         </div>
-                        <p class="project-desc">A multi-agent based organizational behavior simulation system that models the impact of different leadership styles and organizational structures on innovative behavior.</p>
+                        <p class="project-desc">Multi-agent based organizational behavior simulation system that simulates the impact of different leadership styles and organizational structures on innovation behavior.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Multi-agent</span>
-                            <span class="tech-tag">Simulation</span>
+                            <span class="tech-tag">Simulation Model</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link"><i class="fab fa-github"></i> Repository</a>
@@ -296,9 +411,9 @@
                             <i class="fas fa-comments project-icon"></i>
                             <h3>Social Network Analysis Platform</h3>
                         </div>
-                        <p class="project-desc">An analysis platform for organizational internal social networks that visualizes key figure influence and information flow pathways.</p>
+                        <p class="project-desc">Analysis platform for internal organizational social networks, visualizing key person influence and information flow paths.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Network Analysis</span>
+                            <span class="tech-tag">Social Network Analysis</span>
                             <span class="tech-tag">Data Visualization</span>
                             <span class="tech-tag">Graph Algorithms</span>
                         </div>
@@ -312,9 +427,9 @@
                             <i class="fas fa-drone project-icon"></i>
                             <h3>Aerial Photography Collection</h3>
                         </div>
-                        <p class="project-desc">A personal drone photography portfolio documenting natural landscapes and urban scenes across China, utilizing video editing techniques to present unique perspectives.</p>
+                        <p class="project-desc">Personal aerial photography collection, documenting natural landscapes and urban scenery across China, presenting unique perspectives through editing techniques.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Drone Photography</span>
+                            <span class="tech-tag">Aerial Photography</span>
                             <span class="tech-tag">Photography</span>
                             <span class="tech-tag">Video Editing</span>
                         </div>
@@ -326,14 +441,407 @@
                 </div>
             </section>
             
+            <section id="lifestyle" class="section">
+                <h2 class="section-title">Me time Record <span class="title-decoration"></span></h2>
+                <div class="code-style-header">
+                    <pre><code><span class="code-comment">/**
+ * @author: Bruce Liang
+ * @description: Digital footprints beyond academia
+ * @version: 1.0.0
+ */</span></code></pre>
+                </div>
+                
+                <div class="lifestyle-container">
+                    <div class="lifestyle-tabs">
+                        <button class="tab-btn active" data-tab="moments">Daily Records</button>
+                        <button class="tab-btn" data-tab="reading">Reading Notes</button>
+                        <button class="tab-btn" data-tab="photography">Photography</button>
+                        <button class="tab-btn" data-tab="collection">Collection</button>
+                        <button class="tab-btn" data-tab="coding">Coding Notes</button>
+                    </div>
+                    
+                    <div class="tab-content" id="moments">
+                        <div class="moments-timeline">
+                            <div class="moment-item">
+                                <div class="moment-date">April 2024</div>
+                                <div class="moment-content">
+                                    <div class="moment-image">
+                                        <img src="images/placeholder.svg" alt="Life Moment">
+                                    </div>
+                                    <h3>Academic Conference Break <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Beijing</span></h3>
+                                    <p>During a break from an academic conference in Beijing, I took time to visit the Forbidden City. The cultural depth always inspires new research ideas. In the evening, I exchanged ideas with several fellow Ph.D. students about ethical issues in AI for social science research.</p>
+                                    <div class="moment-tags">
+                                        <span class="tag">#AcademicTravel</span>
+                                        <span class="tag">#CulturalExploration</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="moment-item">
+                                <div class="moment-date">March 2024</div>
+                                <div class="moment-content">
+                                    <div class="moment-image">
+                                        <img src="images/placeholder.svg" alt="Life Moment">
+                                    </div>
+                                    <h3>Frontend Learning Journey <span class="location-tag"><i class="fas fa-laptop-code"></i> Online</span></h3>
+                                    <p>Started systematically learning frontend development, enrolled in an online course. Although it's somewhat distant from my research direction, programming thinking is helpful for data analysis and model building. Completed my first small project over the weekend, feeling a great sense of accomplishment!</p>
+                                    <div class="moment-tags">
+                                        <span class="tag">#ProgrammingLearning</span>
+                                        <span class="tag">#InterdisciplinarySkills</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="moment-item">
+                                <div class="moment-date">February 2024</div>
+                                <div class="moment-content">
+                                    <div class="moment-image">
+                                        <img src="images/placeholder.svg" alt="Life Moment">
+                                    </div>
+                                    <h3>Winter Café <span class="location-tag"><i class="fas fa-coffee"></i> Hangzhou</span></h3>
+                                    <p>On a sunny winter day, finding a quiet café to read a good book is the most惬意 time. Today I tried pour-over coffee, savoring the process of tranquility and focus, which is similar to research work.</p>
+                                    <div class="moment-tags">
+                                        <span class="tag">#ReadingTime</span>
+                                        <span class="tag">#CoffeeCulture</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="more-btn">View More Records <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="tab-content hidden" id="reading">
+                        <div class="reading-grid">
+                            <div class="reading-card">
+                                <div class="book-cover">
+                                    <img src="images/placeholder.svg" alt="Book Cover">
+                                </div>
+                                <div class="reading-content">
+                                    <h3>Sapiens: A Brief History of Humankind</h3>
+                                    <p class="author"><em>Yuval Noah Harari</em></p>
+                                    <p class="reading-notes">In the digital age, how do humans maintain self-awareness and social connection? Harari reveals key turning points in human development from a macro historical perspective, inspiring me to think about the balance between technology and humanity.</p>
+                                    <div class="reading-date"><span class="tag-time">November 2023</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="reading-card">
+                                <div class="book-cover">
+                                    <img src="images/placeholder.svg" alt="Book Cover">
+                                </div>
+                                <div class="reading-content">
+                                    <h3>Deep Work: Rules for Focused Success in a Distracted World</h3>
+                                    <p class="author"><em>Cal Newport</em></p>
+                                    <p class="reading-notes">In an age of information overload, focus has become a scarce resource. This book provided me with many insights on how to maintain deep thinking ability in an age of fragmentation, especially regarding time management methods for research work.</p>
+                                    <div class="reading-date"><span class="tag-time">February 2024</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="more-btn">View More Notes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="tab-content hidden" id="photography">
+                        <div class="photo-gallery">
+                            <div class="photo-item">
+                                <img src="images/placeholder.svg" alt="Photography Work">
+                                <div class="photo-overlay">
+                                    <h3>West Lake Dawn</h3>
+                                    <p>Hangzhou, 2023</p>
+                                </div>
+                            </div>
+                            <div class="photo-item">
+                                <img src="images/placeholder.svg" alt="Photography Work">
+                                <div class="photo-overlay">
+                                    <h3>City Silhouette</h3>
+                                    <p>Shanghai, 2022</p>
+                                </div>
+                            </div>
+                            <div class="photo-item">
+                                <img src="images/placeholder.svg" alt="Photography Work">
+                                <div class="photo-overlay">
+                                    <h3>Mountain Path</h3>
+                                    <p>Huangshan, 2023</p>
+                                </div>
+                            </div>
+                            <div class="photo-item">
+                                <img src="images/placeholder.svg" alt="Photography Work">
+                                <div class="photo-overlay">
+                                    <h3>Seaside Sunset</h3>
+                                    <p>Xiamen, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="more-btn">View Full Portfolio <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="tab-content hidden" id="collection">
+                        <div class="collection-grid">
+                            <div class="collection-item">
+                                <div class="collection-image">
+                                    <img src="images/placeholder.svg" alt="Collection">
+                                </div>
+                                <div class="collection-info">
+                                    <h3>Amateur Radio Equipment <span class="badge">HAM Radio</span></h3>
+                                    <p>As a junior HAM enthusiast (call sign: <code class="inline-code">BH1XXX</code>), I have collected several handheld and base stations. Amateur radio is not only a hobby but also a way to connect with the world, especially in emergency situations like natural disasters.</p>
+                                    <div class="tag-container">
+                                        <span class="tech-tag">Yaesu FT-991A</span>
+                                        <span class="tech-tag">Baofeng UV-5R</span>
+                                        <span class="tech-tag">Antenna Modification</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collection-item">
+                                <div class="collection-image">
+                                    <img src="images/placeholder.svg" alt="Collection">
+                                </div>
+                                <div class="collection-info">
+                                    <h3>Mechanical Keyboard Collection</h3>
+                                    <p>As a graduate student who often writes, good input equipment is extremely important. I have collected several mechanical keyboards with different switches, and my current favorite is a 75% layout keyboard with brown switches, which meets programming needs without taking up too much desk space.</p>
+                                    <div class="tag-container">
+                                        <span class="tech-tag">HHKB Pro</span>
+                                        <span class="tech-tag">Keychron K2</span>
+                                        <span class="tech-tag">Custom Keycaps</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collection-item">
+                                <div class="collection-image">
+                                    <img src="images/placeholder.svg" alt="Collection">
+                                </div>
+                                <div class="collection-info">
+                                    <h3>Classic Vinyl Records</h3>
+                                    <p>I enjoy collecting classic vinyl records from various eras, experiencing the charm and texture of music from different times. In my busy research life, the warm sound of vinyl records is the best way to relax.</p>
+                                    <div class="tag-container">
+                                        <span class="tech-tag">Classical Music</span>
+                                        <span class="tech-tag">Jazz</span>
+                                        <span class="tech-tag">70s Rock</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content hidden" id="coding">
+                        <div class="code-container">
+                            <div class="code-snippet">
+                                <div class="code-header">
+                                    <span class="language-badge">JavaScript</span>
+                                    <h3>Frontend Learning Notes</h3>
+                                </div>
+                                <pre class="code-block"><code>// Learning basic React Hooks usage
+import React, { useState, useEffect } from 'react';
+
+function DataFetchingComponent() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    // Simulate data fetching
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://api.example.com/data');
+        const result = await response.json();
+        setData(result);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
+    
+    fetchData();
+  }, []); // Empty dependency array means it only runs on component mount
+  
+  return (
+    &lt;div&gt;
+      {loading ? (
+        &lt;p&gt;Loading data...&lt;/p&gt;
+      ) : (
+        &lt;ul&gt;
+          {data.map(item => (
+            &lt;li key={item.id}&gt;{item.name}&lt;/li&gt;
+          ))}
+        &lt;/ul&gt;
+      )}
+    &lt;/div&gt;
+  );
+}</code></pre>
+                                <p class="code-notes">Notes from my frontend learning journey, just starting to learn React. I've experienced the advantages of declarative UI and how functional components simplify code structure. As a Ph.D. student, learning programming in my spare time is both a hobby and a way to enhance my research capabilities.</p>
+                                <div class="code-meta"><span class="tag-time">Updated: March 2024</span></div>
+                            </div>
+
+                            <div class="code-snippet">
+                                <div class="code-header">
+                                    <span class="language-badge">Python</span>
+                                    <h3>Research Data Processing Script</h3>
+                                </div>
+                                <pre class="code-block"><code>import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Some data visualization experiments
+def analyze_research_data(file_path):
+    """Analyze experimental data and generate charts"""
+    # Read data
+    df = pd.read_csv(file_path)
+    
+    # Data cleaning
+    df = df.dropna()
+    df = df[(df['reaction_time'] > 100) & (df['reaction_time'] < 3000)]
+    
+    # Basic statistics
+    stats = df.groupby('condition').agg({
+        'reaction_time': ['mean', 'std', 'count']
+    })
+    
+    # Visualization
+    plt.figure(figsize=(10, 6))
+    sns.boxplot(x='condition', y='reaction_time', data=df)
+    plt.title('Reaction time distribution under experimental conditions')
+    plt.tight_layout()
+    plt.savefig('reaction_time_by_condition.png')
+    
+    return stats
+
+# Usage example
+if __name__ == "__main__":
+    results = analyze_research_data("experiment_data.csv")
+    print(results)</code></pre>
+                                <p class="code-notes">Python is my得力助手 for processing large amounts of data in research. This script was created for behavioral experiment data analysis, combining pandas and seaborn for data processing and visualization.</p>
+                                <div class="code-meta"><span class="tag-time">Updated: January 2024</span></div>
+                            </div>
+                        </div>
+                        <a href="#" class="more-btn">View More Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+            
             <footer class="footer">
                 <p>&copy; 2024 Bruce Liang. All rights reserved.</p>
+                <div class="contact-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:zk.liang@zju.edu.cn">zk.liang@zju.edu.cn</a></p>
+                    <p><i class="fab fa-weixin"></i> WeChat: L1923Z</p>
+                    <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Liangzhenkun" target="_blank">Liangzhenkun</a></p>
+                    <p><i class="fab fa-instagram"></i> Xiaohongshu: <a href="#" onclick="showXiaohongshuModal()">✨ Bruce_liang</a></p>
+                </div>
                 <p class="footer-note">This website is built with <a href="https://html5up.net/" target="_blank">HTML5</a> and <a href="https://fontawesome.com/" target="_blank">Font Awesome</a></p>
-                <p class="update-time">Last updated: 2025年04月01日</p>
+                <p class="update-time">Last updated: 2026年03月17日</p>
             </footer>
         </main>
     </div>
 
     <script src="js/script.js"></script>
+    
+    <!-- 邮箱选择模态框 -->
+    <div id="email-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+        <div style="background-color: var(--bg-white); margin: 15% auto; padding: 30px; border-radius: 10px; width: 90%; max-width: 400px; box-shadow: 0 4px 12px var(--shadow-color); text-align: center;">
+            <h3 style="margin-bottom: 20px; color: var(--text-color);">Contact me through</h3>
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;">
+                    <span style="color: var(--text-color);">zhenkun_liang@163.com</span>
+                    <button onclick="copyEmail('zhenkun_liang@163.com')" style="padding: 5px 10px; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Copy</button>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;">
+                    <span style="color: var(--text-color);">zk.liang@zju.edu.cn</span>
+                    <button onclick="copyEmail('zk.liang@zju.edu.cn')" style="padding: 5px 10px; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Copy</button>
+                </div>
+            </div>
+            <button onclick="closeEmailModal()" style="padding: 8px 20px; background-color: var(--bg-secondary); color: var(--text-color); border: 1px solid var(--border-color); border-radius: 4px; cursor: pointer;">Close</button>
+        </div>
+    </div>
+    
+    <!-- 小红书二维码模态框 -->
+    <div id="xiaohongshu-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+        <div style="background-color: var(--bg-white); margin: 15% auto; padding: 30px; border-radius: 10px; width: 90%; max-width: 350px; box-shadow: 0 4px 12px var(--shadow-color); text-align: center;">
+            <h3 style="margin-bottom: 20px; color: var(--text-color);">Scan to follow me on Xiaohongshu</h3>
+            <div style="margin-bottom: 20px;">
+                <img src="images/XHS.jpg" alt="Xiaohongshu QR Code" style="width: 250px; height: auto;">
+            </div>
+            <button onclick="closeXiaohongshuModal()" style="padding: 8px 20px; background-color: var(--bg-secondary); color: var(--text-color); border: 1px solid var(--border-color); border-radius: 4px; cursor: pointer;">Close</button>
+        </div>
+    </div>
+    <script>
+        // 头像上传功能
+        document.querySelector('.profile-image').addEventListener('click', function() {
+            document.getElementById('avatar-upload').click();
+        });
+        
+        document.getElementById('avatar-upload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profile-img').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // 邮箱选择功能
+        function showEmailOptions() {
+            document.getElementById('email-modal').style.display = 'block';
+        }
+        
+        function closeEmailModal() {
+            document.getElementById('email-modal').style.display = 'none';
+        }
+        
+        function copyEmail(email) {
+            navigator.clipboard.writeText(email).then(function() {
+                // 显示复制成功提示
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied';
+                btn.style.backgroundColor = 'var(--primary-light)';
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = 'var(--primary-color)';
+                }, 1000);
+            }).catch(function(err) {
+                console.error('Copy failed:', err);
+            });
+        }
+        
+        // 小红书二维码模态框功能
+        function showXiaohongshuModal() {
+            document.getElementById('xiaohongshu-modal').style.display = 'block';
+        }
+        
+        function closeXiaohongshuModal() {
+            document.getElementById('xiaohongshu-modal').style.display = 'none';
+        }
+        
+        // 动态时间显示功能
+        function updateCurrentTime() {
+            const now = new Date();
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false,
+                timeZoneName: 'short'
+            };
+            const formattedTime = now.toLocaleString('en-US', options);
+            document.getElementById('current-time').textContent = formattedTime;
+        }
+        
+        // 初始调用一次
+        updateCurrentTime();
+        // 每秒更新一次
+        setInterval(updateCurrentTime, 1000);
+        
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            const emailModal = document.getElementById('email-modal');
+            const xiaohongshuModal = document.getElementById('xiaohongshu-modal');
+            if (event.target == emailModal) {
+                emailModal.style.display = 'none';
+            } else if (event.target == xiaohongshuModal) {
+                xiaohongshuModal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
-</html> 
+</html>
